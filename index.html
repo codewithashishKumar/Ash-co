@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ash & Co. — thoughtfully selected essentials for modern living.">
+    <title>Ash & Co. — Everyday Pieces, Beautifully Made</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="/Images/Logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="topbar text-center">
+        Free shipping on orders over ₹2,999 · Easy 7-day returns
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="#">
+                <span class="brand-mark">A</span>Ash & Co.
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#new-arrivals">New Arrivals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#collections">Collections</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#journal">Journal</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button class="nav-action" id="searchToggle" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <button class="nav-action" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas"
+                        aria-label="Shopping cart">
+                        <i class="bi bi-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <div class="eyebrow">The Autumn Edit · 2026</div>
+                <h1>Made for<br>everyday living.</h1>
+                <p>
+                    Thoughtfully selected pieces with timeless character,
+                    honest materials, and a little something unexpected.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#shop" class="btn btn-main">Shop the collection</a>
+                    <a href="#collections" class="btn btn-outline-light-custom">Explore categories</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-strip">
+            <div class="container-fluid px-4 px-lg-5">
+                <div class="row text-center">
+                    <div class="col-md-3 trust-item">
+                        <i class="bi bi-box-seam"></i> Carefully packed
+                    </div>
+                    <div class="col-md-3 trust-item">
+                        <i class="bi bi-arrow-repeat"></i> Easy returns
+                    </div>
+                    <div class="col-md-3 trust-item">
+                        <i class="bi bi-shield-check"></i> Secure checkout
+                    </div>
+                    <div class="col-md-3 trust-item">
+                        <i class="bi bi-heart"></i> Made to last
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="collections">
+            <div class="container-fluid px-4 px-lg-5">
+                <div class="section-header">
+                    <div class="section-kicker">Shop by mood</div>
+                    <h2 class="section-title">Find your everyday.</h2>
+                    <p class="section-copy">
+                        A considered collection of clothing, accessories and objects
+                        designed to fit naturally into your life.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#shop" class="category-card d-block">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85"
+                                alt="Clothing collection">
+                            <div class="category-overlay">
+                                <div>
+                                    <h3>Clothing</h3>
+                                    <span>42 pieces</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#shop" class="category-card d-block">
+                            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1000&q=85"
+                                alt="Accessories collection">
+                            <div class="category-overlay">
+                                <div>
+                                    <h3>Accessories</h3>
+                                    <span>28 pieces</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#shop" class="category-card d-block">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=85"
+                                alt="Shoes collection">
+                            <div class="category-overlay">
+                                <div>
+                                    <h3>Footwear</h3>
+                                    <span>19 pieces</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#shop" class="category-card d-block">
+                            <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1000&q=85"
+                                alt="Lifestyle collection">
+                            <div class="category-overlay">
+                                <div>
+                                    <h3>Objects</h3>
+                                    <span>31 pieces</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pt-0" id="shop">
+            <div class="container-fluid px-4 px-lg-5">
+                <div class="section-header">
+                    <div class="section-kicker">The edit</div>
+                    <h2 class="section-title">New favourites.</h2>
+                    <p class="section-copy">
+                        Pieces selected for their shape, texture and ability to stay
+                        relevant long after the season changes.
+                    </p>
+                </div>
+
+                <div class="shop-toolbar d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="d-flex flex-wrap align-items-center" id="filters">
+                        <button class="filter-btn active" data-category="All">All</button>
+                        <button class="filter-btn" data-category="Clothing">Clothing</button>
+                        <button class="filter-btn" data-category="Accessories">Accessories</button>
+                        <button class="filter-btn" data-category="Footwear">Footwear</button>
+                        <button class="filter-btn" data-category="Objects">Objects</button>
+                    </div>
+
+                    <div class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="search" id="productSearch" placeholder="Search products...">
+                    </div>
+                </div>
+
+                <div class="row g-4" id="productGrid"></div>
+            </div>
+        </section>
+
+        <section class="feature-banner" id="about">
+            <div class="row g-0">
+                <div class="col-lg-6 feature-banner-image"></div>
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="feature-banner-content">
+                        <div class="eyebrow text-uppercase" style="color:#d99a80;">The Ash & Co. approach</div>
+                        <h2>Less, but<br>better.</h2>
+                        <p>
+                            We believe the things around us should earn their place.
+                            That's why we look for thoughtful details, versatile shapes
+                            and materials that get better with time.
+                        </p>
+                        <a href="#collections" class="btn btn-main">Discover our story</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section carousel-section" id="new-arrivals">
+            <div class="container-fluid px-4 px-lg-5">
+                <div class="section-header d-flex flex-column flex-lg-row justify-content-between align-items-lg-end">
+                    <div>
+                        <div class="section-kicker">Just landed</div>
+                        <h2 class="section-title">Fresh from the studio.</h2>
+                    </div>
+                    <a href="#shop" class="fw-bold small mt-3 mt-lg-0">View all products →</a>
+                </div>
+
+                <div id="featuredCarousel" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="carousel-product">
+                                        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85"
+                                            alt="Oversized linen shirt">
+                                        <div class="carousel-caption-custom">
+                                            <div class="product-category">Clothing</div>
+                                            <h3>Relaxed Linen Shirt</h3>
+                                            <strong>₹2,490</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 d-none d-md-block">
+                                    <div class="carousel-product">
+                                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85"
+                                            alt="Essential cotton tee">
+                                        <div class="carousel-caption-custom">
+                                            <div class="product-category">Clothing</div>
+                                            <h3>Essential Cotton Tee</h3>
+                                            <strong>₹1,290</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 d-none d-md-block">
+                                    <div class="carousel-product">
+                                        <img src="https://images.unsplash.com/photo-1612902456551-333ac5afa26e?auto=format&fit=crop&w=900&q=85"
+                                            alt="Leather tote bag">
+                                        <div class="carousel-caption-custom">
+                                            <div class="product-category">Accessories</div>
+                                            <h3>Everyday Leather Tote</h3>
+                                            <strong>₹4,290</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="carousel-product">
+                                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+                                            alt="Classic sneakers">
+                                        <div class="carousel-caption-custom">
+                                            <div class="product-category">Footwear</div>
+                                            <h3>Classic Everyday Sneaker</h3>
+                                            <strong>₹3,890</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 d-none d-md-block">
+                                    <div class="carousel-product">
+                                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=85"
+                                            alt="Sunglasses">
+                                        <div class="carousel-caption-custom">
+                                            <div class="product-category">Accessories</div>
+                                            <h3>Studio Sunglasses</h3>
+                                            <strong>₹1,890</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 d-none d-md-block">
+                                    <div class="carousel-product">
+                                        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=85"
+                                            alt="Table lamp">
+                                        <div class="carousel-caption-custom">
+                                            <div class="product-category">Objects</div>
+                                            <h3>Soft Glow Table Lamp</h3>
+                                            <strong>₹2,990</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="journal">
+            <div class="container-fluid px-4 px-lg-5">
+                <div class="section-header">
+                    <div class="section-kicker">Why Ash & Co.</div>
+                    <h2 class="section-title">The details matter.</h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="bi bi-gem"></i></div>
+                            <h4>Thoughtful design</h4>
+                            <p>Simple silhouettes, considered details and pieces designed to work beyond one season.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="bi bi-leaf"></i></div>
+                            <h4>Better materials</h4>
+                            <p>We prioritise natural textures and materials that feel good and age beautifully.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="bi bi-box2-heart"></i></div>
+                            <h4>Packed with care</h4>
+                            <p>Every order is wrapped thoughtfully because opening your package should feel special.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="bi bi-chat-heart"></i></div>
+                            <h4>Real support</h4>
+                            <p>Questions about sizing, styling or your order? A real person is always happy to help.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="section-kicker">Stay in the loop</div>
+            <h2>Good things, occasionally.</h2>
+            <p>New arrivals, quiet launches and stories from Ash & Co. — no noise.</p>
+
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">SUBSCRIBE</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="footer-brand">Ash & Co.</div>
+                    <p>
+                        Modern essentials for everyday living.
+                        Thoughtfully selected, beautifully made and designed
+                        to stay with you.
+                    </p>
+
+                    <div class="d-flex gap-2 mt-4">
+                        <a href="#" class="nav-action"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="nav-action"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="nav-action"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="footer-title">Shop</div>
+                    <a href="#shop" class="footer-link">New Arrivals</a>
+                    <a href="#shop" class="footer-link">Clothing</a>
+                    <a href="#shop" class="footer-link">Accessories</a>
+                    <a href="#shop" class="footer-link">Footwear</a>
+                    <a href="#shop" class="footer-link">Objects</a>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <div class="footer-title">Help</div>
+                    <a href="#" class="footer-link">Shipping</a>
+                    <a href="#" class="footer-link">Returns</a>
+                    <a href="#" class="footer-link">Sizing Guide</a>
+                    <a href="#" class="footer-link">FAQs</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="footer-title">Visit</div>
+                    <p>
+                        Monday — Saturday<br>
+                        10:00 AM — 7:00 PM
+                    </p>
+                    <p>
+                        hello@ashandco.example<br>
+                        +91 98765 43210
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+                <span>© 2026 Ash & Co. All rights reserved.</span>
+                <span>Privacy · Terms · Cookies</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas">
+        <div class="offcanvas-header">
+            <h5 class="mb-0 font-serif">Your bag</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column">
+            <div id="cartItems" class="flex-grow-1"></div>
+
+            <div class="cart-summary">
+                <div class="d-flex justify-content-between mb-3">
+                    <span>Subtotal</span>
+                    <strong id="cartTotal">₹0</strong>
+                </div>
+                <button class="btn btn-main w-100 py-3" id="checkoutBtn">PROCEED TO CHECKOUT</button>
+                <div class="text-center mt-3 small text-muted">Taxes and shipping calculated at checkout.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="row g-0" id="modalProduct"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-4">
+        <div id="cartToast" class="toast border-0" role="alert">
+            <div class="toast-body bg-dark text-white px-4 py-3">
+                <i class="bi bi-check-circle me-2"></i>
+                Added to your bag.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="main.js"></script>
+
+
+</body>
+
+</html>
