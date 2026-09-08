@@ -68,7 +68,7 @@ input {
     border: 1px solid var(--brown);
     border-radius: 50%;
     font-family: "Playfair Display", serif;
-    font-size: 17px;
+    /* font-size: 17px; */
 }
 
 .nav-link {
@@ -791,6 +791,125 @@ footer p {
 
 .toast-container {
     z-index: 1100;
+}
+
+/* ========================================= PREMIUM PAGE LOADER ========================================= */
+.page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #342b26;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 0.8s cubic-bezier(.77, 0, .18, 1), visibility 0.8s ease;
+}
+
+.page-loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+    color: #f7f3ec;
+}
+
+.loader-logo {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 28px;
+    border: 1px solid rgba(247, 243, 236, 0.35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    position: relative;
+    animation: loaderPulse 2s ease-in-out infinite;
+}
+
+.loader-logo::before,
+.loader-logo::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(247, 243, 236, 0.18);
+}
+
+.loader-logo::before {
+    inset: -9px;
+}
+
+.loader-logo::after {
+    inset: -18px;
+}
+
+.loader-brand {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(28px, 4vw, 42px);
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+}
+
+.loader-tagline {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    opacity: 0.55;
+}
+
+.loader-line {
+    width: 140px;
+    height: 1px;
+    background: rgba(247, 243, 236, 0.2);
+    margin: 28px auto 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader-line span {
+    position: absolute;
+    inset: 0;
+    background: #f7f3ec;
+    transform: translateX(-100%);
+    animation: loaderProgress 1.8s cubic-bezier(.65, 0, .35, 1) forwards;
+}
+
+@keyframes loaderProgress {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes loaderPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.04);
+        opacity: 0.75;
+    }
+}
+
+/* ========================================= LAZY IMAGE FADE ========================================= */
+img {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+img.lazy-image {
+    opacity: 0;
+}
+
+img.lazy-image.image-loaded {
+    opacity: 1;
 }
 
 @media (max-width: 991px) {

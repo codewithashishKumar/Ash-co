@@ -1,3 +1,12 @@
+window.addEventListener("load", function () {
+  const loader = document.getElementById("pageLoader");
+  setTimeout(() => {
+    loader.classList.add("loaded");
+    setTimeout(() => {
+      loader.remove();
+    }, 900);
+  }, 650);
+});
 const products = [
   {
     id: 1,
