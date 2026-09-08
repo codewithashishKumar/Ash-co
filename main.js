@@ -358,57 +358,86 @@ function renderCart() {
     })
     .join("");
 }
-
 function openProduct(id) {
   const product = products.find((product) => product.id === id);
 
-  document.getElementById("modalProduct").innerHTML = `
-        <div class="col-lg-6">
-          <img src="${product.image}" class="modal-product-image" alt="${product.name}">
-        </div>
+  document.getElementById("modalProduct").innerHTML =
+    ` <div class="col-lg-6"> <img
+     src="${product.image}"
+     class="modal-product-image"
+     alt="${product.name}"
+     loading="lazy"
+     decoding="async"
+   > </div>
 
-        <div class="col-lg-6 d-flex align-items-center">
-          <div class="modal-product-content">
-            <div class="product-category">${product.category}</div>
-            <h2>${product.name}</h2>
 
-            <div class="rating mb-3">
-              ${stars(product.rating)}
-              <span>${product.rating} · ${product.reviews} reviews</span>
-            </div>
+<div class="col-lg-6 d-flex align-items-center position-relative">
+  <button
+    type="button"
+    class="quick-view-close"
+    data-bs-dismiss="modal"
+    aria-label="Close quick view"
+  >
+    <i class="bi bi-x-lg"></i>
+  </button>
 
-            <div class="fs-4 fw-bold mb-4">
-              ${formatPrice(product.price)}
-              ${product.oldPrice ? `<span class="old-price">${formatPrice(product.oldPrice)}</span>` : ""}
-            </div>
+  <div class="modal-product-content">
+    <div class="product-category">${product.category}</div>
 
-            <p>${product.description}</p>
+    <h2>${product.name}</h2>
 
-            <div class="mt-4">
-              <div class="small fw-bold mb-2">SELECT SIZE</div>
-              <button class="size-btn active">S</button>
-              <button class="size-btn">M</button>
-              <button class="size-btn">L</button>
-              <button class="size-btn">XL</button>
-            </div>
+    <div class="rating mb-3">
+      ${stars(product.rating)}
+      <span>${product.rating} · ${product.reviews} reviews</span>
+    </div>
 
-            <button class="btn btn-main w-100 mt-4 py-3" onclick="addToCart(${product.id})">
-              ADD TO BAG · ${formatPrice(product.price)}
-            </button>
-          </div>
-        </div>
-      `;
+    <div class="fs-4 fw-bold mb-4">
+      ${formatPrice(product.price)}
+      ${
+        product.oldPrice
+          ? `<span class="old-price">${formatPrice(product.oldPrice)}</span>`
+          : ""
+      }
+    </div>
 
-  document.querySelectorAll(".size-btn").forEach((button) => {
+    <p>${product.description}</p>
+
+    <div class="mt-4">
+      <div class="small fw-bold mb-2">SELECT SIZE</div>
+
+      <button type="button" class="size-btn active">S</button>
+      <button type="button" class="size-btn">M</button>
+      <button type="button" class="size-btn">L</button>
+      <button type="button" class="size-btn">XL</button>
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-main w-100 mt-4 py-3"
+      onclick="addToCart(${product.id})"
+    >
+      ADD TO BAG · ${formatPrice(product.price)}
+    </button>
+  </div>
+</div>
+
+
+`;
+
+  const modalElement = document.getElementById("productModal");
+  const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
+
+  modalElement.querySelectorAll(".size-btn").forEach((button) => {
     button.addEventListener("click", () => {
-      document
+      modalElement
         .querySelectorAll(".size-btn")
         .forEach((item) => item.classList.remove("active"));
+
       button.classList.add("active");
     });
   });
 
-  new bootstrap.Modal(document.getElementById("productModal")).show();
+  modal.show();
 }
 
 function toggleWishlist(button) {
