@@ -7,6 +7,7 @@ window.addEventListener("load", function () {
     }, 900);
   }, 650);
 });
+
 const products = [
   {
     id: 1,
@@ -385,11 +386,10 @@ function openProduct(id) {
 
     <div class="fs-4 fw-bold mb-4">
       ${formatPrice(product.price)}
-      ${
-        product.oldPrice
-          ? `<span class="old-price">${formatPrice(product.oldPrice)}</span>`
-          : ""
-      }
+      ${product.oldPrice
+      ? `<span class="old-price">${formatPrice(product.oldPrice)}</span>`
+      : ""
+    }
     </div>
 
     <p>${product.description}</p>
