@@ -489,7 +489,7 @@ document.getElementById("checkoutBtn").addEventListener("click", () => {
     return;
   }
 
-  alert("Demo checkout — connect your payment gateway here.");
+  alert("Demo checkout.");
 });
 
 renderProducts();
