@@ -910,18 +910,17 @@ img.lazy-image.image-loaded {
     opacity: 1;
 }
 
-
 .quick-view-close {
     position: absolute;
-    top: 22px;
-    right: 22px;
-    z-index: 10;
+    top: 18px;
+    right: 18px;
+    z-index: 20;
     width: 44px;
     height: 44px;
-    border: 1px solid rgba(52, 43, 38, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    background: rgba(255, 253, 249, 0.92);
-    color: #342b26;
+    background: rgba(255, 253, 249, 0.15);
+    color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -946,17 +945,10 @@ img.lazy-image.image-loaded {
     box-shadow: 0 0 0 3px rgba(184, 109, 82, 0.18);
 }
 
-.quick-view-close:active {
-    transform: rotate(90deg) scale(0.94);
-}
-
 @media (max-width: 991px) {
     .quick-view-close {
         top: 14px;
         right: 14px;
-        width: 40px;
-        height: 40px;
-        font-size: 14px;
     }
 }
 
@@ -966,6 +958,7 @@ img.lazy-image.image-loaded {
         right: 10px;
         width: 38px;
         height: 38px;
+        font-size: 13px;
     }
 }
 

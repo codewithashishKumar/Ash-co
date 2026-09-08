@@ -172,7 +172,7 @@ const products = [
     reviews: 29,
     badge: "New",
     image:
-      "https://images.unsplash.com/photo-1578500351865-d6c3706b32d4?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "A tactile ceramic vase with a softly organic shape for flowers or as a standalone object.",
   },
@@ -372,14 +372,6 @@ function openProduct(id) {
 
 
 <div class="col-lg-6 d-flex align-items-center position-relative">
-  <button
-    type="button"
-    class="quick-view-close"
-    data-bs-dismiss="modal"
-    aria-label="Close quick view"
-  >
-    <i class="bi bi-x-lg"></i>
-  </button>
 
   <div class="modal-product-content">
     <div class="product-category">${product.category}</div>
