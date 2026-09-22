@@ -454,11 +454,6 @@ document.querySelectorAll(".filter-btn").forEach((button) => {
     button.classList.add("active");
     activeCategory = button.dataset.category;
     renderProducts();
-    const navbar = document.querySelector(".navbar-collapse");
-    if (navbar && navbar.classList.contains("show")) {
-      const navbarInstance = bootstrap.Collapse.getOrCreateInstance(navbar);
-      navbarInstance.hide();
-    }
   });
 });
 
@@ -495,6 +490,27 @@ document.getElementById("checkoutBtn").addEventListener("click", () => {
   }
 
   alert("Demo checkout.");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Close navbar when a navigation link is clicked
+  document.querySelectorAll("#mainNav .nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+
+      // Only close on tablet/mobile (< 992px)
+      if (window.innerWidth < 992) {
+        const navbar = document.getElementById("mainNav");
+
+        if (navbar.classList.contains("show")) {
+          const navbarInstance =
+            bootstrap.Collapse.getOrCreateInstance(navbar);
+
+          navbarInstance.hide();
+        }
+      }
+    });
+  });
+
 });
 
 renderProducts();
