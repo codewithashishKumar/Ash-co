@@ -454,6 +454,11 @@ document.querySelectorAll(".filter-btn").forEach((button) => {
     button.classList.add("active");
     activeCategory = button.dataset.category;
     renderProducts();
+    const navbar = document.querySelector(".navbar-collapse");
+    if (navbar && navbar.classList.contains("show")) {
+      const navbarInstance = bootstrap.Collapse.getOrCreateInstance(navbar);
+      navbarInstance.hide();
+    }
   });
 });
 
